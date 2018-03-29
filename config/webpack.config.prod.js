@@ -27,8 +27,8 @@ const webpackProd = { // 生产配置文件
   module: {        // 处理css scss
     rules: [{
       test: /\.css$/,                   // 生产环境提取css
-      include: [config.SRC_PATH],       // 在源文件目录查询
-      exclude: [config.VENDORS_PATH],   // 忽略第三方的任何代码
+      include: [config.srcPATH],       // 在源文件目录查询
+      exclude: [config.vendorsPATH],   // 忽略第三方的任何代码
       use: cssExtracter.extract({
         fallback: 'style-loader',
         use: [{
@@ -42,14 +42,14 @@ const webpackProd = { // 生产配置文件
     },
     {
       test: /\.scss$/,                  // 生产环境提取css
-      include: [config.SRC_PATH],       // 在源文件目录查询
-      exclude: [config.VENDORS_PATH],   // 忽略第三方的任何代码
+      include: [config.srcPATH],       // 在源文件目录查询
+      exclude: [config.vendorsPATH],   // 忽略第三方的任何代码
       use: sassExtracter.extract({
         fallback: 'style-loader',
         use: [{
           loader: 'css-loader',
           options: {
-            minimize: true //css压缩
+            minimize: true  //css压缩
           }
         }, 'postcss-loader', 'sass-loader'],
         publicPath: '../',      // 默认发布路径会是css，会拼接成css/img/x.png，所以需要重置
@@ -60,15 +60,15 @@ const webpackProd = { // 生产配置文件
   plugins: [
     cssExtracter,    // 生成css文件
     sassExtracter,   // 生成css文件
-    new webpack.DefinePlugin({                   // 指定为生产环境，进而让一些library可以做一些优化
+    new webpack.DefinePlugin({                   // 配置的全局常量 (指定为生产环境，进而让一些library可以做一些优化)
       'process.env.NODE_ENV': JSON.stringify('production')
     }),
-    new webpack.HashedModuleIdsPlugin(),         // 生产环境用于标识模块id
+    new webpack.HashedModuleIdsPlugin(),         // 根据模块的相对路径生成一个四位数的hash作为模块id, 建议用于生产环境
     new CleanWebpackPlugin(['./dist/'], {
-      root: config.PROJECT_PATH,               // 默认为__dirname，所以需要调整
+      root: config.projectPATH,               // 默认为__dirname，所以需要调整
     }),
     new webpack.optimize.CommonsChunkPlugin({    // 抽取公共chunk
-      name: 'commons',                         // 指定公共 bundle 的名称。HTMLWebpackPlugin才能识别
+      name: 'commons',                           // 指定公共 bundle 的名称。HTMLWebpackPlugin才能识别
       filename: 'js/commons.[chunkhash:8].bundle.js'
     }),
     new UglifyJSPlugin(),
