@@ -2,10 +2,11 @@
   "name": "WebpackTemplate",
   "version": "1.0.0",
   "description": "This is WebpackTemplate",
-  "main": "main.js",
+  "main": "index.js",
   "scripts": {
-    "build": "webpack --progress --color --config ./config/webpack.config.prod.js",
-    "dev": "webpack-dev-server --open --progress --color --config ./config/webpack.config.dev.js"
+    "build": "webpack --progress --color --config ./build/webpack.config.prod.js",
+    "dev": "webpack-dev-server --progress --color --config ./build/webpack.config.dev.js",
+    "test": "echo \"Error: no test specified\" && exit 1"
   },
   "repository": {
     "type": "git",
@@ -26,21 +27,24 @@
     "babel-loader": "^7.1.2",
     "babel-preset-env": "^1.6.1",
     "clean-webpack-plugin": "^0.1.17",
+    "copy-webpack-plugin": "4.5.1",
     "css-loader": "^0.28.7",
     "extract-text-webpack-plugin": "^3.0.2",
     "file-loader": "^1.1.6",
     "html-webpack-plugin": "^2.30.1",
+    "less": "3.0.1",
+    "less-loader": "4.1.0",
     "node-sass": "^4.7.2",
+    "optimize-css-assets-webpack-plugin": "^3.2.0",
     "postcss-loader": "^2.0.9",
     "sass-loader": "^6.0.6",
     "style-loader": "^0.19.1",
+    "stylus": "0.54.5",
+    "stylus-loader": "3.0.2",
     "uglifyjs-webpack-plugin": "^1.1.5",
     "url-loader": "^0.6.2",
     "webpack": "^3.10.0",
     "webpack-dev-server": "^2.9.7",
     "webpack-merge": "^4.1.1"
-  },
-  "dependencies": {
-    "babel-polyfill": "^6.26.0"
   }
 }
