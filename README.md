@@ -16,7 +16,9 @@
 </pre>
 
 ## 使用说明
-1. 打开build/config.js文件进行设置
+> 需要NodeJS环境、git环境
+
+1. 打开build/config.js文件根据自身要求进行自定义设置
 <pre>
 const config = {
   projectPath,                                                      // 项目根目录
@@ -50,3 +52,8 @@ const config = {
 
 };
 </pre>
+2. npm run build 构建dist生产目录
+
+3. npm run dev   构建热更新服务
+
+4. 开始进行开发
