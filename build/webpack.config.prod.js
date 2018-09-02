@@ -200,7 +200,7 @@ const webpackProd = { // 生产配置文件
     // 优化chunk
     new webpack.optimize.SplitChunksPlugin({
       chunks: "all",                   // 哪些块进行优化，"initial"|"all"|"async"(默认) (string function)
-      minSize: 3000,                   // 要生成的块的最小大小，默认3000
+      minSize: 2000,                   // 要生成的块的最小大小，默认3000
       minChunks: 1,                    // 分割前必须共享模块的最小块数，默认1
       maxAsyncRequests: 5,             // 最大异步并行请求数，默认5
       maxInitialRequests: 3,           // 最大初始化并行请求书，默认3

@@ -1,6 +1,10 @@
 .test {
   border-left-color: blue;
 }
+img {
+  width: 100px;
+  height: 100px;
+}
 
 .example {                  // 测试postcss
   display: grid;
