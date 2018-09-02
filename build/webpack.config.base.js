@@ -72,7 +72,7 @@ module.exports = {
         include: [config.srcPath],        // 在源文件目录查询
         exclude: [config.assetsSubDirectory],
         use: [
-          { loader: 'babel-loader', options: { presets: ['babel-preset-env'] } }
+          { loader: 'babel-loader' }
         ]
       },
       {

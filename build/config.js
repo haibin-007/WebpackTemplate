@@ -4,6 +4,7 @@ const path = require('path')
 const utils = require('./utils')
 
 const config = {
+
   projectPath: utils.resolve('/'),                                  // 项目根目录
   srcPath: utils.resolve('/src/'),                                  // 源文件目录
   node_modulesPath: utils.resolve('/node_modules/'),                // node_modules目录
@@ -30,6 +31,7 @@ const config = {
       '/api': 'http://localhost:3000'
     }
   },
+
   build: {
     prodSourceMap: false,                                             // 是否开启SourcMap
     devtool: 'source-map',
