@@ -1,4 +1,3 @@
-# WebTemplate
 Build the best web project template!
 
 # 多页面Webpack脚手架
