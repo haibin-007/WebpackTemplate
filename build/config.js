@@ -16,7 +16,7 @@ const config = {
 
   dev: {
     host: 'localhost',
-    port: '3002',
+    port: '3003',
 
     devSourceMap: false,                                             // 是否开启SourceMap
     devtool: 'eval-source-map',
