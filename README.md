@@ -36,7 +36,7 @@
 > 需要NodeJS环境、git环境，
 > 我所使用的版本：node v10.1.0 npm 6.3.0
 1. 克隆库到本地
-> HTTPS方式： git clone https://github.com/HeavenBin/WebpackTemplate.git\
+> HTTPS方式： git clone https://github.com/HeavenBin/WebpackTemplate.git    
 > SSH方式：git clone git@github.com:HeavenBin/WebpackTemplate.git
 
 2. cd WebpackTemplate 进入项目目录
