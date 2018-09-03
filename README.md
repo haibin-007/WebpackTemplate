@@ -35,7 +35,13 @@
 ## 使用说明
 > 需要NodeJS环境、git环境，
 > 我所使用的版本：node v10.1.0 npm 6.3.0
-1. 打开build/config.js文件根据自身要求进行自定义设置
+1. 克隆库到本地
+> HTTPS方式： git clone https://github.com/HeavenBin/WebpackTemplate.git\
+> SSH方式：git clone git@github.com:HeavenBin/WebpackTemplate.git
+
+2. cd WebpackTemplate 进入项目目录
+
+3. 打开build/config.js文件根据自身要求进行自定义设置
 ```javascript
 const config = {
   projectPath: utils.resolve('/'),                                  // 项目根目录
@@ -74,8 +80,8 @@ const config = {
   }
 }
 ```
-2. npm run build 构建dist生产目录
+4. npm run build 构建dist生产目录
 
-3. npm run dev   构建热更新服务
+5. npm run dev   构建热更新服务
 
-4. 开始进行开发
+6. 开始进行开发
